@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { skillGroups, type Skill } from "@/lib/data";
 import Reveal, { TextReveal } from "../ui/Reveal";
 import TechLogo from "../ui/TechLogo";
@@ -31,8 +30,6 @@ function SkillTile({ skill }: { skill: Skill }) {
 }
 
 export default function Skills() {
-  const [showAll, setShowAll] = useState(false);
-
   return (
     <section id="skills" aria-labelledby="skills-title" className="section bg-card/0 pt-0">
       <div className="wrap">
@@ -53,19 +50,9 @@ export default function Skills() {
               </span>,
             ]}
           />
-          <Reveal delay={120} className="max-w-[40ch] lg:pb-3">
-            <button
-              type="button"
-              className="btn btn-ghost btn-sm !px-0 font-mono !text-[12px] uppercase tracking-[0.06em]"
-              aria-pressed={showAll}
-              onClick={() => setShowAll((s) => !s)}
-            >
-              <span className="u">{showAll ? "Hide usage details" : "Show where each is used"}</span>
-            </button>
-          </Reveal>
         </div>
 
-        <div className={`mt-16 ${showAll ? "[&_.usage]:!grid-rows-[1fr]" : ""}`}>
+        <div className="mt-16">
           {skillGroups.map((g, gi) => (
             <Reveal
               key={g.id}
