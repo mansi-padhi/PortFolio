@@ -41,12 +41,6 @@ export default function Work() {
               </span>,
             ]}
           />
-          <Reveal delay={120} className="max-w-[40ch] lg:pb-3">
-            <p className="text-[15.5px] leading-relaxed text-ink-2">
-              Projects from my résumé. Open a panel for the details. The interfaces shown are illustrative, not
-              screenshots.
-            </p>
-          </Reveal>
         </div>
 
         <Reveal delay={100} className="mt-14">

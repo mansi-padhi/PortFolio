@@ -32,7 +32,6 @@ function SkillTile({ skill }: { skill: Skill }) {
 
 export default function Skills() {
   const [showAll, setShowAll] = useState(false);
-  const total = skillGroups.reduce((n, g) => n + g.skills.length, 0);
 
   return (
     <section id="skills" aria-labelledby="skills-title" className="section bg-card/0 pt-0">
@@ -55,13 +54,9 @@ export default function Skills() {
             ]}
           />
           <Reveal delay={120} className="max-w-[40ch] lg:pb-3">
-            <p className="text-[15.5px] leading-relaxed text-ink-2">
-              {total} technologies and concepts, all taken from my résumé. Hover a tile to see where it actually shows
-              up in my work.
-            </p>
             <button
               type="button"
-              className="btn btn-ghost btn-sm mt-3 !px-0 font-mono !text-[12px] uppercase tracking-[0.06em]"
+              className="btn btn-ghost btn-sm !px-0 font-mono !text-[12px] uppercase tracking-[0.06em]"
               aria-pressed={showAll}
               onClick={() => setShowAll((s) => !s)}
             >

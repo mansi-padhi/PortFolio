@@ -158,7 +158,6 @@ export const skillGroups: SkillGroup[] = [
   {
     id: "projects",
     title: "Also used in projects",
-    note: "Not listed under Technical Skills, but named in the project stacks.",
     skills: [
       { name: "TypeScript", icon: "typescript", usedIn: ["Hotelator OS"] },
       { name: "WebSocket", icon: "websocket", usedIn: ["Mental Wellness App"] },
